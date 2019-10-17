@@ -12,3 +12,17 @@ D:\Udemy\DatingAPI\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.Assembl
 D:\Udemy\DatingAPI\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.RazorTargetAssemblyInfo.cache
 D:\Udemy\DatingAPI\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.dll
 D:\Udemy\DatingAPI\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.pdb
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\bin\Debug\netcoreapp2.2\DatingAPI.deps.json
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\bin\Debug\netcoreapp2.2\DatingAPI.runtimeconfig.json
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\bin\Debug\netcoreapp2.2\DatingAPI.runtimeconfig.dev.json
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\bin\Debug\netcoreapp2.2\DatingAPI.dll
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\bin\Debug\netcoreapp2.2\DatingAPI.pdb
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.csproj.CoreCompileInputs.cache
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.RazorAssemblyInfo.cache
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.RazorAssemblyInfo.cs
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.AssemblyInfoInputs.cache
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.AssemblyInfo.cs
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.RazorTargetAssemblyInfo.cache
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.dll
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.pdb
+D:\Udemy\Git\DateApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.csprojAssemblyReference.cache

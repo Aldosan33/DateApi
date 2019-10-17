@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Udemy\\DatingAPI\\DatingAPI\\DatingAPI\\DatingAPI.csproj": {}
+    "D:\\Udemy\\Git\\DateApi\\DatingAPI\\DatingAPI\\DatingAPI.csproj": {}
   },
   "projects": {
-    "D:\\Udemy\\DatingAPI\\DatingAPI\\DatingAPI\\DatingAPI.csproj": {
+    "D:\\Udemy\\Git\\DateApi\\DatingAPI\\DatingAPI\\DatingAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Udemy\\DatingAPI\\DatingAPI\\DatingAPI\\DatingAPI.csproj",
+        "projectUniqueName": "D:\\Udemy\\Git\\DateApi\\DatingAPI\\DatingAPI\\DatingAPI.csproj",
         "projectName": "DatingAPI",
-        "projectPath": "D:\\Udemy\\DatingAPI\\DatingAPI\\DatingAPI\\DatingAPI.csproj",
+        "projectPath": "D:\\Udemy\\Git\\DateApi\\DatingAPI\\DatingAPI\\DatingAPI.csproj",
         "packagesPath": "C:\\Users\\Avantica\\.nuget\\packages\\",
-        "outputPath": "D:\\Udemy\\DatingAPI\\DatingAPI\\DatingAPI\\obj\\",
+        "outputPath": "D:\\Udemy\\Git\\DateApi\\DatingAPI\\DatingAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
             }
           },
           "imports": [
