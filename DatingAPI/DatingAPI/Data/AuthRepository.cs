@@ -30,7 +30,7 @@ namespace DatingAPI.Data
         {
             using (var hmac = new HMACSHA512(passwordSalt))
             {
-                var computedHash = Encoding.UTF8.GetBytes(password);
+                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
                 for (int i = 0; i < computedHash.Length; i++)
                 {
                     if (computedHash[i] != passwordHash[i]) return false;
