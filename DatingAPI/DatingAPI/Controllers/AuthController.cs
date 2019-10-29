@@ -19,6 +19,7 @@ namespace DatingAPI.Controllers
     {
         private readonly IAuthRepository _authRepository;
         private readonly IConfiguration _config;
+
         public AuthController(IAuthRepository authRepository, IConfiguration config)
         {
             _authRepository = authRepository;
@@ -30,7 +31,7 @@ namespace DatingAPI.Controllers
         {
             model.Username = model.Username.ToLower();
 
-            if(await _authRepository.UserExists(model.Username))
+            if (await _authRepository.UserExists(model.Username))
             {
                 return BadRequest("Username already exists");
             }
@@ -50,7 +51,7 @@ namespace DatingAPI.Controllers
         {
             var userLogging = await _authRepository.Login(model.Username.ToLower(), model.Password);
 
-            if(userLogging == null)
+            if (userLogging == null)
             {
                 return Unauthorized();
             }

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace DatingAPI.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -18,6 +17,7 @@ namespace DatingAPI.Controllers
             _dbContext = dbContext;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -26,6 +26,7 @@ namespace DatingAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetById(int id)
         {
             var result = await _dbContext.Values.FirstOrDefaultAsync(x => x.Id == id);
