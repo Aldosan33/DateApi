@@ -13004,11 +13004,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Udemy\\Git\\DateApi\\DatingAPI\\DatingAPI\\DatingAPI.csproj",
+      "projectUniqueName": "D:\\Udemy\\Git\\DatingApi\\DatingAPI\\DatingAPI\\DatingAPI.csproj",
       "projectName": "DatingAPI",
-      "projectPath": "D:\\Udemy\\Git\\DateApi\\DatingAPI\\DatingAPI\\DatingAPI.csproj",
+      "projectPath": "D:\\Udemy\\Git\\DatingApi\\DatingAPI\\DatingAPI\\DatingAPI.csproj",
       "packagesPath": "C:\\Users\\Avantica\\.nuget\\packages\\",
-      "outputPath": "D:\\Udemy\\Git\\DateApi\\DatingAPI\\DatingAPI\\obj\\",
+      "outputPath": "D:\\Udemy\\Git\\DatingApi\\DatingAPI\\DatingAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
