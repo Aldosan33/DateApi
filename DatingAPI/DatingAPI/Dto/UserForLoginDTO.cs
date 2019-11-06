@@ -2,7 +2,7 @@
 
 namespace DatingAPI.Dto
 {
-    public class UserDTO
+    public class UserForLoginDTO
     {
         [Required]
         public string Username { get; set; }

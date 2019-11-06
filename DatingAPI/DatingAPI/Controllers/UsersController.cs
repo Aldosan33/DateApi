@@ -18,6 +18,7 @@ namespace DatingAPI.Controllers
     {
         private readonly IDatingRepository _repo;
         private readonly IMapper _mapper;
+
         public UsersController(IDatingRepository repo, IMapper mapper)
         {
             _repo = repo;
@@ -32,10 +33,10 @@ namespace DatingAPI.Controllers
 
             var id = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
-            return Ok(usersToReturn.Where(x => x.Id != id).ToList());
+            return Ok(usersToReturn.Where(u => u.Id != id).ToList());
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetUser")]
         public async Task<IActionResult> GetUser(int id)
         {
             var user = await _repo.GetUser(id);
@@ -52,7 +53,7 @@ namespace DatingAPI.Controllers
             var userFromRepo = await _repo.GetUser(id);
             _mapper.Map(userFromModel, userFromRepo);
 
-            if(await _repo.SaveAll())
+            if (await _repo.SaveAll())
             {
                 return NoContent();
             }
