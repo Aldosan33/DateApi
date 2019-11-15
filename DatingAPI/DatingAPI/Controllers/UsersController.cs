@@ -16,7 +16,7 @@ namespace DatingAPI.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController : BaseController
     {
         private readonly IDatingRepository _repo;
         private readonly IMapper _mapper;
@@ -59,7 +59,7 @@ namespace DatingAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, UserForUpdateDTO userFromModel)
         {
-            if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value)) return Unauthorized();
+            if (!ValidateAuthenticationUserId(id)) return Unauthorized();
 
             var userFromRepo = await _repo.GetUser(id);
             _mapper.Map(userFromModel, userFromRepo);
@@ -77,7 +77,8 @@ namespace DatingAPI.Controllers
         [HttpPost("{id}/likes/{recipientId}")]
         public async Task<IActionResult> LikeUser(int id, int recipientId)
         {
-            if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value)) return Unauthorized();
+            if (!ValidateAuthenticationUserId(id)) return Unauthorized();
+
             var like = await _repo.GetLike(id, recipientId);
 
             if (like != null) return BadRequest("You already liked this user");

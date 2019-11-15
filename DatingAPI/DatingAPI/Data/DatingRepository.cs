@@ -127,13 +127,13 @@ namespace DatingAPI.Data
             switch (messageParams.MessageContainer)
             {
                 case "Inbox":
-                    messages = messages.Where(u => u.RecipientId == messageParams.UserId);
+                    messages = messages.Where(u => u.RecipientId == messageParams.UserId && u.RecipientDeleted == default);
                     break;
                 case "Outbox":
-                    messages = messages.Where(u => u.SenderId == messageParams.UserId);
+                    messages = messages.Where(u => u.SenderId == messageParams.UserId && u.SenderDeleted == default);
                     break;
                 default: //"Unread"
-                    messages = messages.Where(u => u.RecipientId == messageParams.UserId && u.IsRead == default);
+                    messages = messages.Where(u => u.RecipientId == messageParams.UserId && u.RecipientDeleted == default && u.IsRead == default);
                     break;
             }
 
@@ -142,9 +142,16 @@ namespace DatingAPI.Data
             return await PagedList<Message>.CreateAsync(messages, messageParams.PageNumber, messageParams.PageSize);
         }
 
-        public Task<IEnumerable<Message>> GetMessageThread(int userId, int recipientId)
+        public async Task<IEnumerable<Message>> GetMessageThread(int userId, int recipientId)
         {
-            throw new NotImplementedException();
+            var messages = await _context.Messages.Include(u => u.Sender).ThenInclude(p => p.Photos)
+                                            .Include(u => u.Recipient).ThenInclude(p => p.Photos)
+                                            .Where(m => m.SenderId == userId && m.RecipientId == recipientId && m.SenderDeleted == default ||
+                                                        m.SenderId == recipientId && m.RecipientId == userId && m.RecipientDeleted == default)
+                                            .OrderByDescending(m => m.MessageSent)
+                                            .ToListAsync();
+
+            return messages;
         }
     }
 }

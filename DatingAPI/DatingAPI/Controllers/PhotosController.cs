@@ -17,7 +17,7 @@ namespace DatingAPI.Controllers
     [Authorize]
     [Route("api/users/{userId}/photos")]
     [ApiController]
-    public class PhotosController : ControllerBase
+    public class PhotosController : BaseController
     {
         private readonly IDatingRepository _repo;
         private readonly IMapper _mapper;
@@ -46,7 +46,7 @@ namespace DatingAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddPhotoUser(int userId, [FromForm] PhotoForCreationDTO photoFromModel)
         {
-            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value)) return Unauthorized();
+            if (!ValidateAuthenticationUserId(userId)) return Unauthorized();
 
             var userFromRepo = await _repo.GetUser(userId);
             var file = photoFromModel.File;
@@ -90,7 +90,7 @@ namespace DatingAPI.Controllers
         [HttpPost("{id}/main")]
         public async Task<IActionResult> SetMainPhoto(int userId, int id)
         {
-            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value)) return Unauthorized();
+            if (!ValidateAuthenticationUserId(userId)) return Unauthorized();
 
             var user = await _repo.GetUser(userId);
 
@@ -113,7 +113,7 @@ namespace DatingAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePhoto(int userId, int id)
         {
-            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value)) return Unauthorized();
+            if (!ValidateAuthenticationUserId(userId)) return Unauthorized();
 
             var user = await _repo.GetUser(userId);
 
