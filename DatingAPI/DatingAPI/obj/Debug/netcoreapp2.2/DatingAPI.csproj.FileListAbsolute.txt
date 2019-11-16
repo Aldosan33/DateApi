@@ -39,3 +39,4 @@ D:\Udemy\Git\DatingApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.Ass
 D:\Udemy\Git\DatingApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.RazorTargetAssemblyInfo.cache
 D:\Udemy\Git\DatingApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.dll
 D:\Udemy\Git\DatingApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.pdb
+D:\Udemy\Git\DatingApi\DatingAPI\DatingAPI\obj\Debug\netcoreapp2.2\DatingAPI.csprojAssemblyReference.cache
