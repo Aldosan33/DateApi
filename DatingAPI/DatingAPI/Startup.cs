@@ -27,7 +27,10 @@ namespace DatingAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
+            services.AddDbContext<DataContext>(options => {
+                options.UseLazyLoadingProxies();
+                options.UseSqlServer(Configuration.GetConnectionString("DbConnection"));
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddJsonOptions(options =>
                 {
